@@ -1,0 +1,15 @@
+.end{
+   color: #b76e79 !important;
+}
+
+.card{
+border-radius: 20px;
+}
+
+.card{
+transition: 0.5s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
