@@ -1,65 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlowMatch</title>
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="media.css">
 
-    <link rel="stylesheet" href="Home.css">
+    <title>GlowMatch</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
     <!-- start navbar -->
-     <nav>
-        <div class="nav_left">
-            <h1>GLOWMATCH</h1>
-        </div>
-        <div class="nav_center">
-            <ul class="list">
-                <li><a href="#">SPECIALS</a></li>
-                <li><a href="#">PACKAGES</a></li>
-                <li><a href="#">BOOK ONLINE</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
-        </div>
-        <div class="nav_right">
-            <h2>LOG IN</h2>
-        </div>
-     </nav>
-         <!-- end navbar -->
-        <div class="Home">
-        <div class="welcome">
-            <h1>welcome</h1>
-            <p>To a Full Beauty & Experiance</p>
-        </div>
-        <div class="side_dots">
-            <div class="dot_item">
-                <span>Home</span>
-                <button class="dot"></button>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+
+            <h1 class="navbar-brand fw-bold">
+                GlowMatch
+            </h1>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="#Home">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#category">categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactus">contact us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">footer</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search products...">
+                    <i class="bi bi-search"></i>
+                </form>
             </div>
-            <div class="dot_item">
-                <span>Winter special</span>
-                <button class="dot"></button>
-            </div>
-            <div class="dot_item">
-                <span>Book Now</span>
-                <button class="dot"></button>
-            </div>
-            <div class="dot_item">
-                <span>testmonials</span>
-                <button class="dot"></button>
-            </div>
-            <div class="dot_item">
-                <span>contact</span>
-                <button class="dot"></button>
-            </div>
-                <div class="dot_item">
-                <span>Footer</span>
-                <button class="dot"></button>
-            </div> 
         </div>
-    </div>
+    </nav>
+
+    <!-- end navbar -->
+    <!-- Start Home -->
+    <section class="Home container-fluid" id="Home">
+        <div class="row align-items-center min-vh-100">
+            <!-- Welcome Text -->
+            <div class="col-12 col-lg-9 welcome text-center">
+                <h1>welcome</h1>
+                <p>To a Full Beauty & Experience</p>
+            </div>
+        </div>
+    </section>
+    <!-- End Home -->
+
+    <!-- start categories section -->
+    <section class="categories py-5" id="category">
+        <div class="container">
+            <h2 class="categories-title text-center mb-5">Categories</h2>
+            <div class="categories-scroll">
+                <!-- skin care -->
+                <div class="category-item">
+                    <a href="skincare.html" class="category-link">
+                        <div class="category-card">
+                            <img src="./imgs/skin care/1790786625654273111.png" alt="skincare">
+                        </div>
+                        <h5 class="category-name">Skin Care <span>></span></h5>
+                    </a>
+                </div>
+                <!-- make up -->
+                <div class="category-item">
+                    <a href="makeup.html" class="category-link">
+                        <div class="category-card">
+                            <img src="./imgs/makeup/1790785019778088892.png" alt="makeup">
+                        </div>
+                        <h5 class="category-name">Makeup <span>></span></h5>
+                    </a>
+                </div>
+                <!-- body care -->
+                <div class="category-item">
+                    <a href="bodycare.html" class="category-link">
+                        <div class="category-card">
+                            <img src="./imgs/body care/1790786603662724520.png" alt="bodycare">
+                        </div>
+                        <h5 class="category-name">Body Care <span>></span></h5>
+                    </a>
+                </div>
+                <!-- hair care -->
+                <div class="category-item">
+                    <a href="haircare.html" class="category-link">
+                        <div class="category-card">
+                            <img src="./imgs/hair care/1790786439050525591.png" alt="haircare">
+                        </div>
+                        <h5 class="category-name">Hair Care <span>></span></h5>
+                    </a>
+                </div>
+                <!-- perfumes -->
+                <div class="category-item">
+                    <a href="perfumes.html" class="category-link">
+                        <div class="category-card">
+                            <img src="./imgs/perfumes/1790863883160498953.png" alt="perfumes">
+                        </div>
+                        <h5 class="category-name"> Perfumes <span>></span></h5>
+                    </a>
+                </div>
+                <!-- Body splash -->
+                <div class="category-item">
+                    <a href="bodysplash.html" class="category-link">
+                        <div class="category-card">
+                            <img src="./imgs/body splash/1790862529593742128.png" alt="bodysplash">
+                        </div>
+                        <h5 class="category-name">Body Splash <span>></span></h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end categories section -->
+    <!-- start contact us -->
+    <section class="contactus d-flex align-items-center justify-content-center" id="contactus">
+
+        <div class="contact-box row bg-white ">
+
+            <!-- Left Side -->
+            <div class="contat-info  col-md-6 col-12">
+
+                <div class="mean">
+                    <h1>Get in Touch</h1>
+
+                    <h6>I'd like to hear from you!</h6>
+
+                    <p class="text-muted">
+                        If you have any inquiries or just want to say hi,
+                        please use the contact form!
+                    </p>
+                </div>
+
+                <div class="contact-details">
+
+                    <div class="mail">
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <a href="#">
+                            glowmatch@gmail.com
+                        </a>
+                    </div>
+
+                    <div class="app">
+                        <i class="fa-regular fa-thumbs-up"></i>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Side: Contact Form -->
+            <div class="contact_form  col-md-6 col-12">
+
+                <form>
+                    <div class="row">
+
+                        <div class="mb-3 col-md-6 col-12">
+                            <label for="firstName" class="form-label">
+                                Name
+                            </label>
+
+                            <input type="text" class="form-control" id="firstName" name="firstName">
+                        </div>
+
+                        <div class="mb-3 col-md-6 col-12">
+                            <label for="lastName" class="form-label">
+                                Last Name
+                            </label>
+
+                            <input type="text" class="form-control" id="lastName" name="lastName">
+                        </div>
+
+                        <div class="mb-3 col-12">
+                            <label for="email" class="form-label">
+                                Email <span class="text-danger">*</span>
+                            </label>
+
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="name@example.com" required>
+                        </div>
+
+                        <div class="mb-3 col-12">
+                            <label for="message" class="form-label">
+                                Message
+                            </label>
+
+                            <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <div class="text-end">
+                            <button class="btn send-btn" type="submit">
+                                Send
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- end contact us -->
+    <!-- start footer -->
+    <footer class="footer container-fluid py-5" id="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3">
+                    <h3>Glow Match</h3>
+                    <p>Your beauty, our passion ♡</p>
+                </div>
+
+                <div class="col-md-3">
+                    <h4>Quick Links</h4>
+                    <p>Home</p>
+                    <p>skin car</p>
+                    <p>Makeup</p>
+                    <p>Hair care</p>
+                    <p>Body splash</p>
+                    <p>Body care</p>
+                    <p>Perfumes</p>
+                </div>
+
+                <div class="col-md-3">
+                    <h4>Customer Service</h4>
+                    <p>FAQs</p>
+                    <p>Shipping Policy</p>
+                    <p>Return & Refund</p>
+                </div>
+
+                <div class="col-md-3">
+                    <h4>Contact Us</h4>
+                    <div class="d-flex  align-items-center gap-3 mb-3">
+                        <div
+                            class="icon-email text-white rounded-circle d-flex justify-content-center align-items-center">
+                            <i class=" bi bi-envelope-fill"></i>
+                        </div>
+                        <p class="mb-0 ">Email:info@glowbeauty.com</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div
+                            class="icon-phone text-white rounded-circle d-flex justify-content-center align-items-center p-2">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <span>Phone: 01027203721</span>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <!-- end footer -->
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
