@@ -271,6 +271,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100%;
+    scroll-behavior: auto;
 }
 
 /* Pink Background */
@@ -279,6 +280,11 @@ body {
     min-height: 100vh;
     width: 100%;
     padding: 40px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    scroll-margin-top: 0;
 }
 
 /* White Box */
@@ -286,18 +292,20 @@ body {
     width: 100%;
     max-width: 1200px;
     min-height: 600px;
-    margin: 0;
+    margin: 0 auto;
     padding: 45px;
     display: flex;
     align-items: center;
-    border-radius: 2px;
-    flex-wrap: nowrap;
-    height: auto;
+    border-radius: 3px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    /* height: auto; */
 }
 
 /* Left Section */
 .contactus .contat-info {
-    padding: 20px;
+    padding: 25px;
+    min-width: 0;
 }
 
 .contactus .mean {
@@ -364,7 +372,8 @@ body {
 
 /* Right Section: Form */
 .contactus .contact_form {
-    padding: 20px;
+    padding: 25px;
+    min-width: 0;
 }
 
 .contactus .contact_form>form>.row {
@@ -382,6 +391,7 @@ body {
     border: 1px solid #ded6d4;
     border-radius: 3px;
     background-color: #fff;
+    box-sizing: border-box;
 }
 
 .contactus .contact_form textarea {
@@ -398,7 +408,7 @@ body {
     width: 50%;
     padding: 12px 25px;
     margin-top: 5px;
-    background-color: rgb(201, 132, 113);
+    background-color: rgb(198, 101, 101);
     color: white;
     border: none;
     border-radius: 3px;
@@ -406,14 +416,17 @@ body {
 }
 
 .contactus .send-btn:hover {
-    background-color: rgb(173, 105, 88);
+    background-color: rgba(228, 81, 81, 0.86);
     color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(173,105, 88, .3);
 }
+
 
 /* end contact us */
 /* footer */
 .footer {
-    background-color: #60393e;
+    background-color: #511921;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -423,7 +436,7 @@ body {
 
 .footer h3,
 .footer h4 {
-    color: #a98a8f;
+    color: #913e4a;
     font-weight: bold;
     margin-bottom: 20px;
 }

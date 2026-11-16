@@ -1,8 +1,13 @@
 #Home,#category,#contactus,#footer{
     scroll-margin-top: 90px;
 }
-body{
+html,body{
+    width: 100%;
+    min-height: 100%;
     padding-top: 50px;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 .navbar {
     background-color: #e8d5c4;
@@ -99,6 +104,21 @@ html {
     background-repeat: no-repeat;
     min-height: 350px;
     color: #ba9fa3;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+}
+footer .container-fluid{
+    width: 100% !important;
+    margin: 0;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .footer h3,
