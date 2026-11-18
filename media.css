@@ -34,18 +34,22 @@
     }
 
 }
+
 /* categories */
-@media(max-width: 576px){
-    .categories-title{
+@media(max-width: 576px) {
+    .categories-title {
         font-size: 30px;
     }
-    .category-card{
+
+    .category-card {
         height: 250px;
     }
-    .category-name{
+
+    .category-name {
         font-size: 16px;
     }
 }
+
 /* contact us */
 
 /* =========================
@@ -63,7 +67,7 @@
 
     .contactus .contact-box {
         padding: 30px;
-        min-height: auto;    
+        min-height: auto;
     }
 
     .contactus .mean {
@@ -79,7 +83,8 @@
     .contactus .contact_form {
         padding: 20px;
     }
-    .contactus .send-btn{
+
+    .contactus .send-btn {
         width: 65%;
     }
 }
@@ -109,10 +114,12 @@
     .contactus h6 {
         margin: 18px 0;
     }
-    .contactus .mean p{
+
+    .contactus .mean p {
         font-size: 14px;
     }
-    .contactus .mail a{
+
+    .contactus .mail a {
         font-size: 14px;
     }
 
@@ -121,11 +128,12 @@
         width: 100%;
         padding: 15px;
     }
+
     /* .contactus .contact_form,
      .contactus .contat-info{
         min-width: 0;
     } */
-    .contactus .contact_form .form-control{
+    .contactus .contact_form .form-control {
         max-width: 100%;
     }
 
@@ -148,9 +156,10 @@
 
 /* Very Small Screens */
 @media (max-width: 380px) {
-    .contactus{
+    .contactus {
         padding: 15px 8px;
     }
+
     .contactus .contact-box {
         padding: 15px 8px;
     }
@@ -162,6 +171,7 @@
     .contactus .mail a {
         font-size: 13px;
     }
+
     .contactus .send-btn {
         width: 100%;
     }

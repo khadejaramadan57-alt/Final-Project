@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-bs-theme", saved || (dark ? "dark" : "light"));
+    })();
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="./product-pages.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+  <!-- start navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+      <h1 class="navbar-brand fw-bold">GlowMatch</h1>
+
+      <!-- نسخة الموبايل -->
+      <div class="d-flex align-items-center ms-auto d-lg-none gap-2">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search...">
+          <i class="bi bi-search"></i>
+        </form>
+
+        <button class="theme-btn theme-toggle" type="button" aria-label="Toggle theme">
+          <i class="bi bi-moon-fill"></i>
+          <span class="theme-text d-none d-sm-inline">Dark</span>
+        </button>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#Home">home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#category">categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contactus">contact us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">footer</a></li>
+        </ul>
+
+        <!-- نسخة الشاشة الكبيرة -->
+        <form class="d-none d-lg-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search products...">
+          <i class="bi bi-search"></i>
+        </form>
+
+        <button class="theme-btn theme-toggle d-none d-lg-flex" type="button" aria-label="Toggle theme">
+          <i class="bi bi-moon-fill"></i>
+          <span class="theme-text">Dark</span>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+  <div class="container pt-5">
+    <div class="row g-4 justify-content-center">
+
+      <h1 class="text-center">Best-Selling Products ❤️</h1>
+
+      <div class="container pt-5">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl4hctd_P-o-KvTTNM7AbM2PfU6LJHKFpZMqi9HHo6LQ&s"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  ​Hairfall control mask for dry and damaged hair.<br>
+                <p>Price:220EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAhxueejNitamDscUAEbXAlK8gh8H6GwzhFonieHhneA&s=10"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  ​Deep smoothing hair mask with keratin and marula oil for frizz control.<br>
+                <p>Price:250EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe3LXS0ommGnhBcvoN6sHQPlJPCNLbx4W8SdNdt4HMCQ&s"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  Length-boosting hair oil elixir for all hair types<br>
+                <p>Price:260EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class=" end text-center pt-5">
+            <h1>New Arrivals</h1>
+            <p>Browse our brand new collections</p>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdeAuMJD8a-as5GSQji78cNelT0_4fXAtMQQ5VR7zMiw&s"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                <p class="card-text">
+                  High-shine intensive conditioner for dull, dry hair<br>
+                <p>Price:450EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBhJHWovfdK-26w5-KHNXr-Y5ZevzD04pAcnPK5OZACA&s"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  ​Nourishing leave-in conditioner to hydrate, detangle, and strengthen hair.<br>
+                <p>Price:750EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3UladDF37R4y-apsXkFWsBZFHN9FxVTT2xOlGfNyliw&s"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  ​Ultra-hydrating conditioner enriched with mango, cocoa, and shea butters.<br>
+                <p>Price:2300EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container pt-5">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3KOxOyWd2ujhH1lwDCh4u1GDzwNDtWANNLUwNbhGROg&s=10"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  Hydrating overnight leave-in hair mask for soft, nourished hair<br>
+                <p>Price:900EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSNxCDGkdvrdlVVJh7shlHQMagaUrk2Zr0po9KgUrHy1tcWSacLMy30BRe-RSQPCs9bXhOWyXzyH3so2nQq8qQMHR7WhEAMeG_9hj2Uz7rYSSgf6FdI4Pd85NLrgFtiGbXFfw&usqp=CAc"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  Scalp serum to support healthy hair growth and thickness.<br>
+                <p>Price:300EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVYTNVmqF1BTzoxfGu6FD3yVwSbd2I1O79VdnjqN0zBw&s=10"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  Complete hair rescue set featuring a purifying shampoo and repairing hair mask.<br>
+                <p>Price:700EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="container pt-5">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlS7sneD3V0_W79i-GsfEMJeNH3jFbTFvMYB4VS1m6MQ&s=10"
+                    class="card-img-top">
+                  <div class="card-body">
+                    <p class="card-text">
+                      ​Botanical curl care trio for hydrated, bouncy, defined curls<br>
+                    <p>Price:900EGP</p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_BRY9cRHLejZwNnOesbUUE5QWdXoev7e80EoNlW2YaA&s=10"
+                    class="card-img-top">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Complete curly hair care set for frizz-free, nourished curls.<br>
+                    <p>Price:900EGP</p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSta4aciObV-lSx4f9hwevk83uWkCgPVLoFSnV8Lqx6eA&s"
+                    class="card-img-top">
+                  <div class="card-body">
+                    <p class="card-text">
+                      ​Natural haircare collection for healthy, radiant, nourished hair.<br>
+                    <p>Price:950EGP</p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="container pt-5">
+                <div class="row g-4 justify-content-center">
+                  <div class="col-md-4">
+                    <div class="card h-100">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOOpXmC_5UTAN8HGdsyQE4AaCwA8jLrLM25KYHZsKO6g&s=10"
+                        class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text">
+                          Hairfall control conditioner for soft, strengthened hair.<br>
+                        <p>Price:210EGP</p>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="card h-100">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWIpRyqMlMQ4aBbaxSsMPJGgUwxq5vFnwZJNvh5p7jCg&s=10"
+                        class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text">
+                          Moisturizing conditioner for soft, frizz-free curls.<br>
+                        <p>Price:140EGP</p>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="card h-100">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKydIpTtZI3eIGuF2SPJXUm89tsyrk2x2df2T4CsNyPQ&s"
+                        class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text">
+                          ​Nourishing conditioner for smooth, hydrated hair.<br>
+                        <p>Price:170EGP</p>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="container pt-5">
+                    <div class="row g-4 justify-content-center">
+                      <div class="col-md-4">
+                        <div class="card h-100">
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYyiBN45lWLdn7DXKsrYCwYPY_Im-7142jTcCd7nQAyw&s"
+                            class="card-img-top">
+                          <div class="card-body">
+                            <p class="card-text">
+                              ​Luxury haircare travel kit with styling essentials and a cosmetic pouch.<br>
+                            <p>Price:900EGP</p>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="card h-100">
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT0Y7xPYOQMsZGLL71UMcGaxrXXJg3gUNo_uXoET1YVw&s=10"
+                            class="card-img-top">
+                          <div class="card-body">
+                            <p class="card-text">
+                              Nourishing hair cream infused with Indian herbs for soft, healthy hair.<br>
+                            <p>Price:110EGP</p>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card h-100">
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy8RxSltG9WiXsGTOE7BBFxeZhdLLgP-7AQcLPrzQRvQ&s=10"
+                            class="card-img-top">
+                          <div class="card-body">
+                            <p class="card-text">
+                              Professional curl care routine for deep hydration and long-lasting definition.<br>
+                            <p>Price:900EGP</p>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- start footer -->
+                      <footer class="footer container-fluid py-5" id="footer">
+                        <div class="container">
+                          <div class="row">
+
+                            <div class="col-md-3">
+                              <h3>Glow Match</h3>
+                              <p>Your beauty, our passion ♡</p>
+                            </div>
+
+                            <div class="col-md-3">
+                              <h4>Quick Links</h4>
+                              <p>Home</p>
+                              <p>skin car</p>
+                              <p>Makeup</p>
+                              <p>Hair care</p>
+                              <p>Body splash</p>
+                              <p>Body care</p>
+                              <p>Perfumes</p>
+                            </div>
+
+                            <div class="col-md-3">
+                              <h4>Customer Service</h4>
+                              <p>FAQs</p>
+                              <p>Shipping Policy</p>
+                              <p>Return & Refund</p>
+                            </div>
+
+                            <div class="col-md-3">
+                              <h4>Contact Us</h4>
+                              <div class="d-flex  align-items-center gap-3 mb-3">
+                                <div
+                                  class="icon-email text-white rounded-circle d-flex justify-content-center align-items-center">
+                                  <i class=" bi bi-envelope-fill"></i>
+                                </div>
+                                <p class="mb-0 ">Email:info@glowbeauty.com</p>
+                              </div>
+                              <div class="d-flex align-items-center gap-3">
+                                <div
+                                  class="icon-phone text-white rounded-circle d-flex justify-content-center align-items-center p-2">
+                                  <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <span>Phone: 01027203721</span>
+                              </div>
+                            </div>
+                          </div>
+                      </footer>
+
+
+                      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                        crossorigin="anonymous"></script>
+                      <script src="./js/index.js"></script>
+</body>
+
+</html>

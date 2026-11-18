@@ -8,11 +8,11 @@
     <title>GlowMatch</title>
     <!-- java script-->
     <script>
-      (function () {
-        var saved = localStorage.getItem("theme");
-        var dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        document.documentElement.setAttribute("data-bs-theme", saved || (dark ? "dark" : "light"));
-      })();
+        (function () {
+            var saved = localStorage.getItem("theme");
+            var dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.setAttribute("data-bs-theme", saved || (dark ? "dark" : "light"));
+        })();
     </script>
 
 
@@ -36,13 +36,13 @@
             </h1>
             <div class="d-flex align-items-center ms-auto d-lg-none">
                 <form class="d-flex" role="search">
-                   <input class="form-control me-2" type="search" placeholder="Search...">
-                   <i class="bi bi-search"></i>
+                    <input class="form-control me-2" type="search" placeholder="Search...">
+                    <i class="bi bi-search"></i>
                 </form>
 
                 <button class="theme-btn theme-toggle" type="button" aria-label="Toggle theme">
-                  <i class="bi bi-moon-fill"></i>
-                  <span class="theme-text d-none d-sm-inline">Dark</span>                </button>
+                    <i class="bi bi-moon-fill"></i>
+                    <span class="theme-text d-none d-sm-inline">Dark</span> </button>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,11 +70,12 @@
                     <input class="form-control me-2 d-none d-lg-flex" type="search" placeholder="Search products...">
                     <i class="bi bi-search"></i>
                 </form>
-                <button id="theme-toggle" class=" theme-toggle theme-btn d-none d-lg-flex" type="button"aria-label="Toggle theme">
+                <button id="theme-toggle" class=" theme-toggle theme-btn d-none d-lg-flex" type="button"
+                    aria-label="Toggle theme">
 
-                    <i class="bi bi-moon-fill"></i>    <span id="theme-text">Dark</span>
+                    <i class="bi bi-moon-fill"></i> <span id="theme-text">Dark</span>
                 </button>
-                
+
             </div>
         </div>
     </nav>
