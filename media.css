@@ -166,3 +166,26 @@
         width: 100%;
     }
 }
+
+
+@media (max-width: 991px) {
+    .navbar-brand {
+        font-size: 22px;
+        margin-right: 0;
+    }
+
+    .navbar .form-control {
+        width: 110px;
+        font-size: 14px;
+        padding: 4px 12px;
+    }
+
+    .bi-search {
+        font-size: 20px;
+    }
+
+    .theme-btn {
+        margin-left: 4px;
+        font-size: 14px;
+    }
+}

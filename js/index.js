@@ -4,7 +4,7 @@ let firstName = document.getElementById("firstName");
 let lastName = document.getElementById("lastName");
 let email = document.getElementById("email");
 
-let rgxName = /^[A-Z][a-zA-Z]*$/;
+let rgxName = /^[A-Za-z][a-z]*$/;
 let rgxEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
     //remove extra spaces
@@ -43,3 +43,26 @@ let rgxEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
     }
 
 };
+const root = document.documentElement;
+const themeBtns = document.querySelectorAll(".theme-toggle");
+
+function updateIcon() {
+  const dark = root.getAttribute("data-bs-theme") === "dark";
+  document.querySelectorAll(".theme-toggle i").forEach(i => {
+    i.className = dark ? "bi bi-sun-fill" : "bi bi-moon-fill";
+  });
+  document.querySelectorAll(".theme-text").forEach(t => {
+    t.textContent = dark ? "Light" : "Dark";
+  });
+}
+
+updateIcon();
+
+themeBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const next = root.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-bs-theme", next);
+    localStorage.setItem("theme", next);
+    updateIcon();
+  });
+});
