@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-bs-theme", saved || (dark ? "dark" : "light"));
+    })();
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="./product-pages.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+  <!-- start navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+      <h1 class="navbar-brand fw-bold">GlowMatch</h1>
+
+      <!-- نسخة الموبايل -->
+      <div class="d-flex align-items-center ms-auto d-lg-none gap-2">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search...">
+          <i class="bi bi-search"></i>
+        </form>
+
+        <button class="theme-btn theme-toggle" type="button" aria-label="Toggle theme">
+          <i class="bi bi-moon-fill"></i>
+          <span class="theme-text d-none d-sm-inline">Dark</span>
+        </button>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#Home">home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#category">categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contactus">contact us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">footer</a></li>
+        </ul>
+
+        <!-- نسخة الشاشة الكبيرة -->
+        <form class="d-none d-lg-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search products...">
+          <i class="bi bi-search"></i>
+        </form>
+
+        <button class="theme-btn theme-toggle d-none d-lg-flex" type="button" aria-label="Toggle theme">
+          <i class="bi bi-moon-fill"></i>
+          <span class="theme-text">Dark</span>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+  <div class="container pt-5">
+    <div class="row g-4 justify-content-center">
+
+      <h1 class="text-center">Best-Selling Products ❤️</h1>
+
+      <div class="container pt-5">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ1YCcgwHlRKM-qlKoddEH5XARSrKg3nK9hUjAiChIXw&s"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  Long-lasting vanilla fine fragrance mist for an enchanting scent<br>
+                <p>Price:900EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqtZv0N-LdXvpzp_c9yo6e57RFvULtRShyqPFv1xpEzQ&s=10"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  ​Warm, floral-fruity fragrance mist for an enchanting, lasting scent.<br>
+                <p>Price:900EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn18r0A65GMWWYCHZrtbmlfCknzzPiqBqZfboWftpRfw&s=10"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  Delicate floral body mist for a glamorous, lasting freshness<br>
+                <p>Price:350EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class=" end text-center pt-5">
+            <h1>New Arrivals</h1>
+            <p>Browse our brand new collections</p>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHrp1r8EedUesrB8sUomsYahgVa3zr_MBbk8jeBTTDzg&s=10"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                <p class="card-text">
+                  Vegan passionfruit body mist for an instant cooling refreshment.<br>
+                <p>Price:700EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDUDPXxbjUxnDUPGaiy2SyBkcXLbQE4rz1ifZ_XaqRYA&s"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  ​Sweet floral-fruity perfume with playful cotton candy notes<br>
+                <p>Price:900EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpCQuNySxSwQgZ8sdv_oz0HKp9fDQYHRv242i4kK-t0A&s=10"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  ​Romantic pink rose body mist for a soft, refreshing scent.<br>
+                <p>Price:200EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container pt-5">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZvn5ioMq2h0J95BCuIJUUBh_255hajSrElgmqqhFUPA&s=10"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  ​Fresh, airy scented body mist for light everyday freshness.<br>
+                <p>Price:200EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5e58B2ZvOC1Sc0Ip9z14ojboIWDxxcE1lW24ogu2fkQ&s=10"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  Sweet, warm vanilla body splash for an irresistible daily scent.<br>
+                <p>Price:200EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVHriYmYCeS_FH8GDluVi0xH6QSxtor6CF6A5FUeRw8Q&s=10"
+                class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  ​Warm, sensual hair and body mist with vanilla and floral notes<br>
+                <p>Price:900EGP</p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="container pt-5">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkEX73IQhmzpt_c0YXoJdwUUWpAcYU6Y-3Ug9cizMAZw&s=10"
+                    class="card-img-top">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Warm, romantic vanilla fragrance mist with spicy cardamom notes<br>
+                    <p>Price:850EGP</p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrIt83I0BvnMq3N31JNf0tzdcp2GMF2Dr7iSZ75KlY7w&s=10"
+                    class="card-img-top">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Clean, sensual vanilla body mist for a soft everyday scent<br>
+                    <p>Price:900EGP</p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf-F2Fy_kRx8rD-MTbFbBM8xVwPKPy16QNV2P7y6pnnw&s"
+                    class="card-img-top">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Refreshing tropical body splash with a lively, sweet scent.<br>
+                    <p>Price:140EGP</p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="container pt-5">
+                <div class="row g-4 justify-content-center">
+                  <div class="col-md-4">
+                    <div class="card h-100">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2x9RzGVpolaylj_XXI0ok0eCfIlo0fUTgUfxauuqDWw&s=10"
+                        class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text">
+                          Sweet, floral-fruity perfume body mist for daily freshness.<br>
+                        <p>Price:600EGP</p>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="card h-100">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjdb1Fk3DwKZnbBK0ORnZ7Scb-d5IH63Rqn16SM1pfqg&s=10"
+                        class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text">
+                          Tropical coconut scented body mist with essential oils<br>
+                        <p>Price:850EGP</p>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="card h-100">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0_QscgzfymFov8FLUoinvwwaXLb73CO-GSbttfyTTIQ&s"
+                        class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text">
+                          ​Warm amber, pear, and cinnamon scented body mist for a rich aroma<br>
+                        <p>Price:220EGP</p>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="container pt-5">
+                    <div class="row g-4 justify-content-center">
+                      <div class="col-md-4">
+                        <div class="card h-100">
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyWSkN7HPUi6U4WYZI_YLLNhrF0cShogtG_Pxiu7IAA&s=10"
+                            class="card-img-top">
+                          <div class="card-body">
+                            <p class="card-text">
+                              Soft musky jasmine body mist for lasting floral freshness.<br>
+                            <p>Price:120EGP</p>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="card h-100">
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRew9A0i5-zdgDXAUCYh9OCTogEriifdpIB8Hu7ovjxkg&s"
+                            class="card-img-top">
+                          <div class="card-body">
+                            <p class="card-text">
+                              ​Velvety pink cashmere fragrance mist with soft floral and amber<br>
+                            <p>Price:850EGP</p>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card h-100">
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoURTPx45dUCJoOC2U4GUrDh1v9YqETaFW87byQPQF1w&s=10"
+                            class="card-img-top">
+                          <div class="card-body">
+                            <p class="card-text">
+                              ​Warm, cozy vanilla and passionfruit scented body mist.<br>
+                            <p>Price:850EGP</p>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- start footer -->
+                      <footer class="footer container-fluid py-5" id="footer">
+                        <div class="container">
+                          <div class="row">
+
+                            <div class="col-md-3">
+                              <h3>Glow Match</h3>
+                              <p>Your beauty, our passion ♡</p>
+                            </div>
+
+                            <div class="col-md-3">
+                              <h4>Quick Links</h4>
+                              <p>Home</p>
+                              <p>skin car</p>
+                              <p>Makeup</p>
+                              <p>Hair care</p>
+                              <p>Body splash</p>
+                              <p>Body care</p>
+                              <p>Perfumes</p>
+                            </div>
+
+                            <div class="col-md-3">
+                              <h4>Customer Service</h4>
+                              <p>FAQs</p>
+                              <p>Shipping Policy</p>
+                              <p>Return & Refund</p>
+                            </div>
+
+                            <div class="col-md-3">
+                              <h4>Contact Us</h4>
+                              <div class="d-flex  align-items-center gap-3 mb-3">
+                                <div
+                                  class="icon-email text-white rounded-circle d-flex justify-content-center align-items-center">
+                                  <i class=" bi bi-envelope-fill"></i>
+                                </div>
+                                <p class="mb-0 ">Email:info@glowbeauty.com</p>
+                              </div>
+                              <div class="d-flex align-items-center gap-3">
+                                <div
+                                  class="icon-phone text-white rounded-circle d-flex justify-content-center align-items-center p-2">
+                                  <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <span>Phone: 01027203721</span>
+                              </div>
+                            </div>
+                          </div>
+                      </footer>
+
+
+                      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                        crossorigin="anonymous"></script>
+                      <script src="./js/index.js"></script>
+</body>
+
+</html>
