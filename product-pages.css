@@ -12,7 +12,6 @@
     --card-border: rgba(0, 0, 0, 0.175);
     --title-color: #800020;
 }
-
 [data-bs-theme="dark"] {
     --text-main: #e6d5d5;
     --page-bg: #1a1214;
@@ -186,7 +185,6 @@ footer .container-fluid {
     flex-shrink: 0;
 
 }
-
 .theme-btn {
     display: flex;
     align-items: center;
