@@ -9,6 +9,7 @@
     --cat-bg: #fffafc;
     --cat-title: #393238;
     --cat-text: #51464d;
+    --cat-scroll-bg: #d1b8c2;
     --card-bg: #f1e4e9;
     --cat-hover: #b16d8b;
     --contact-bg: rgb(225, 191, 187);
@@ -34,6 +35,7 @@
     --cat-bg: #1a1214;
     --cat-title: #f0e4e8;
     --cat-text: #d8c8ce;
+    --cat-scroll-bg: #bb98a6;
     --card-bg: #2c2024;
     --cat-hover: #f0a8c4;
     --contact-bg: #241719;
@@ -318,7 +320,7 @@ a {
 }
 
 .categories-scroll::-webkit-scrollbar-thumb {
-    background-color: #d1b8c2;
+    background-color:var(--cat-scroll-bg);
     border-radius: 10px;
 }
 
