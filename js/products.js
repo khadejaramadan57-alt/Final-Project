@@ -1,8 +1,3 @@
-// All prices are in EGP.
-// tag: "best" = Best-Selling, "new" = New Arrivals, "" = normal product
-// id: unique per product (used by the cart, never change it after customers order)
-// soldOut: true = shows a "Sold out" badge on the image
-// oldPrice is optional (only for discounted products)
 
 const products = {
   skincare: [
@@ -307,7 +302,8 @@ const products = {
       soldOut: false
     }
   ],
-    bodycare: [
+
+  bodycare: [
     {
       id: "bodycare-1",
       name: "Soothing After-Sun Lotion",
@@ -975,16 +971,31 @@ const categoryNames = {
   bodysplash: "Body Splash"
 };
 
-function fillSection(name, items) {
+// Puts <mark> around the typed letters inside a text (not case sensitive)
+function highlight(text, word) {
+  if (word === "") return text;
+
+  // escape special characters so typing "(" or "+" doesn't break the search
+  const safe = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const regex = new RegExp(safe, "gi");
+
+  return text.replace(regex, function (match) {
+    return "<mark>" + match + "</mark>";
+  });
+}
+
+function fillSection(name, items, word) {
+  word = word || "";
   const section = document.getElementById(name + "-section");
 
   // no products for this section -> hide it
   if (items.length === 0) {
+    document.getElementById(name + "-list").innerHTML = "";
     section.classList.add("d-none");
     return;
   }
 
-  let cartona = "";   
+  let cartona = "";   // empty at the start
 
   for (let i = 0; i < items.length; i++) {
     const p = items[i];
@@ -995,6 +1006,7 @@ function fillSection(name, items) {
       ? '<button class="btn btn-secondary w-100" disabled>Sold out</button>'
       : `<button class="btn add-to-cart w-100" data-id="${p.id}">Add to cart</button>`;
 
+    // add one more card to cartona on every loop
     cartona += `
       <div class="col-md-4">
         <div class="card h-100">
@@ -1003,8 +1015,8 @@ function fillSection(name, items) {
             <img src="${p.img}" class="card-img-top" alt="${p.name}">
           </div>
           <div class="card-body">
-            <h5 class="card-title">${p.name}</h5>
-            <p class="card-text">${p.desc}</p>
+            <h5 class="card-title">${highlight(p.name, word)}</h5>
+            <p class="card-text">${highlight(p.desc, word)}</p>
             <p class="fw-bold">${oldPrice}${p.price} EGP</p>
             ${button}
           </div>
@@ -1016,17 +1028,21 @@ function fillSection(name, items) {
   section.classList.remove("d-none");
 }
 
-function renderProducts() {
-  if (!document.getElementById("all-list")) return;
-
-  const cat = new URLSearchParams(location.search).get("cat");
+// Shows the products of one category (Best-Selling, New Arrivals, then the rest)
+function showCategory(cat) {
   const list = products[cat];
+  const emptyMsg = document.getElementById("empty-msg");
 
+  emptyMsg.classList.add("d-none");
   document.getElementById("page-title").textContent = categoryNames[cat] || "Products";
 
+  // category is empty or the name in the link is wrong
   if (!list || list.length === 0) {
-    document.getElementById("empty-msg").classList.remove("d-none");
-    document.getElementById("all-section").classList.add("d-none");
+    emptyMsg.textContent = "No products here yet.";
+    emptyMsg.classList.remove("d-none");
+    fillSection("best", []);
+    fillSection("new", []);
+    fillSection("all", []);
     return;
   }
 
@@ -1050,4 +1066,98 @@ function renderProducts() {
   fillSection("new", newItems);
   fillSection("all", otherItems);
 }
+
+// Search: looks in ALL categories (name, description and category name)
+function showSearchResults(text) {
+  const word = text.trim();
+  const emptyMsg = document.getElementById("empty-msg");
+  let results = [];
+
+  emptyMsg.classList.add("d-none");
+
+  for (const cat in products) {
+    for (let i = 0; i < products[cat].length; i++) {
+      const p = products[cat][i];
+      const searchIn = (p.name + " " + p.desc + " " + categoryNames[cat]).toLowerCase();
+
+      if (searchIn.includes(word.toLowerCase())) {
+        results.push(p);
+      }
+    }
+  }
+
+  document.getElementById("page-title").textContent = word === "" ? "All Products" : 'Search: "' + word + '"';
+  document.title = "GlowMatch - Search";
+
+  // search results are shown in one list (no Best-Selling / New Arrivals titles)
+  fillSection("best", []);
+  fillSection("new", []);
+
+  if (results.length === 0) {
+    emptyMsg.textContent = "No products found.";
+    emptyMsg.classList.remove("d-none");
+    fillSection("all", []);
+    return;
+  }
+
+  fillSection("all", results, word);
+}
+
+// Search while typing: runs on every letter
+function setupLiveSearch(cat) {
+  const boxes = document.querySelectorAll('input[name="search"]');
+  const forms = document.querySelectorAll('form[role="search"]');
+
+  // pressing Enter should not reload the page (results are already shown)
+  for (let i = 0; i < forms.length; i++) {
+    forms[i].addEventListener("submit", function (e) {
+      e.preventDefault();
+    });
+  }
+
+  for (let i = 0; i < boxes.length; i++) {
+    boxes[i].addEventListener("input", function () {
+      const text = boxes[i].value;
+
+      // keep the mobile box and the big-screen box the same
+      for (let j = 0; j < boxes.length; j++) {
+        boxes[j].value = text;
+      }
+
+      if (text.trim() !== "") {
+        showSearchResults(text);
+      } else if (cat) {
+        showCategory(cat);          // box is empty -> back to the category
+      } else {
+        showSearchResults("");      // no category -> all products
+      }
+    });
+  }
+}
+
+function renderProducts() {
+  // do nothing on pages that don't have the products containers (e.g. cart.html)
+  if (!document.getElementById("all-list")) return;
+
+  const params = new URLSearchParams(location.search);
+  const cat = params.get("cat");               // products.html?cat=makeup
+  const searchText = params.get("search");     // products.html?search=vanilla
+
+  setupLiveSearch(cat);
+
+  if (searchText !== null) {
+    // came from another page with a searched word: keep it inside the boxes
+    const boxes = document.querySelectorAll('input[name="search"]');
+    for (let i = 0; i < boxes.length; i++) {
+      boxes[i].value = searchText;
+    }
+    showSearchResults(searchText);
+  } else if (cat === null) {
+    // opened products.html without ?cat=... -> show all products (not an empty page)
+    showSearchResults("");
+  } else {
+    showCategory(cat);
+  }
+}
+
 renderProducts();
