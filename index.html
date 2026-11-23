@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
 
     <title>GlowMatch</title>
     <!-- java script-->
@@ -40,6 +40,10 @@
                     <input class="form-control me-2" type="search" placeholder="Search...">
                     <i class="bi bi-search"></i>
                 </form>
+                <a href="cart.html" class="cart-link d-lg-none" aria-label="Shopping cart">
+                    <i class="bi bi-cart3"></i>
+                    <span class="cart-count">0</span>
+                </a>
 
                 <button class="theme-btn theme-toggle" type="button" aria-label="Toggle theme">
                     <i class="bi bi-moon-fill"></i>
@@ -54,23 +58,27 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link " href="#Home">home</a>
+                        <a class="nav-link " href="#Home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#category">categories</a>
+                        <a class="nav-link " href="#category">Categories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contactus">contact us</a>
+                        <a class="nav-link" href="#contactus">Contact us</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#footer">footer</a>
+                        <a class="nav-link" href="#footer">Footer</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2 d-none d-lg-flex" type="search" placeholder="Search products...">
                     <i class="bi bi-search"></i>
                 </form>
+                <a href="cart.html" class="cart-link d-none d-lg-inline-flex" aria-label="Shopping cart">
+                    <i class="bi bi-cart3"></i>
+                    <span class="cart-count">0</span>
+                </a>
 
                 <button class="theme-btn theme-toggle d-none d-lg-flex" type="button" aria-label="Toggle theme">
                     <i class="bi bi-moon-fill"></i>
@@ -82,81 +90,137 @@
     </nav>
 
     <!-- end navbar -->
+
     <!-- Start Home -->
     <section class="Home container-fluid" id="Home">
+
         <div class="row align-items-center min-vh-100">
-            <!-- Welcome Text -->
-            <div class="col-12 col-lg-9 welcome text-center">
-                <h1>welcome</h1>
-                <p>To a Full Beauty & Experience</p>
+
+            <div class="col-12 col-lg-7 hero-content">
+
+                <span class="hero-label">
+                    <i class="bi bi-stars"></i>
+                    YOUR BEAUTY, YOUR RULES
+                </span>
+
+                <h1>
+                    Discover Your
+                    <span>Beauty</span>
+                </h1>
+
+                <p class="hero-description">
+                    Explore a world of beauty, skincare and self-care.
+                    Find your favorites and let your natural beauty shine.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="offers.html" class="hero-btn primary-btn">
+                        Explore Offers
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                    <a href="#category" class="hero-btn secondary-btn">
+                        Explore Categories
+                    </a>
+                </div>
+
+                <p class="hero-note">
+                    <i class="bi bi-heart-fill"></i>
+                    A little beauty, a lot of confidence.
+                </p>
+
             </div>
+
         </div>
+
     </section>
     <!-- End Home -->
 
-    <!-- start categories section -->
+    <!-- Start Categories Section -->
     <section class="categories py-5" id="category">
         <div class="container">
-            <h2 class="categories-title text-center mb-5">Categories</h2>
-            <div class="categories-scroll">
-                <!-- skin care -->
-                <div class="category-item">
-                    <a href="./products.html?cat=skincare" class="category-link">
-                        <div class="category-card">
-                            <img src="./imgs/skin care/1790786625654273111.png" alt="skincare">
+
+            <div class="categories-heading text-center">
+                <span class="categories-subtitle">FIND YOUR FAVORITES</span>
+                <h2 class="categories-title">Explore Our Categories</h2>
+                <p class="categories-description">
+                    Everything you need to feel beautiful, inside and out.
+                </p>
+            </div>
+
+            <div class="categories-grid">
+
+                <!-- Skin Care -->
+                <a href="./products.html?cat=skincare" class="category-link">
+                    <div class="category-card">
+                        <img src="./imgs/skin care/1790786625654273111.png" alt="Skin Care">
+                        <div class="category-overlay">
+                            <h5>Skin Care</h5>
+                            <span><i class="bi bi-arrow-up-right"></i></span>
                         </div>
-                        <h5 class="category-name">Skin Care <span>></span></h5>
-                    </a>
-                </div>
-                <!-- make up -->
-                <div class="category-item">
-                    <a href="./products.html?cat=makeup" class="category-link">
-                        <div class="category-card">
-                            <img src="./imgs/makeup/1790785019778088892.png" alt="makeup">
+                    </div>
+                </a>
+
+                <!-- Makeup -->
+                <a href="./products.html?cat=makeup" class="category-link">
+                    <div class="category-card">
+                        <img src="./imgs/makeup/1790785019778088892.png" alt="Makeup">
+                        <div class="category-overlay">
+                            <h5>Makeup</h5>
+                            <span><i class="bi bi-arrow-up-right"></i></span>
                         </div>
-                        <h5 class="category-name">Makeup <span>></span></h5>
-                    </a>
-                </div>
-                <!-- body care -->
-                <div class="category-item">
-                    <a href="./products.html?cat=bodycare" class="category-link">
-                        <div class="category-card">
-                            <img src="./imgs/body care/1790786603662724520.png" alt="bodycare">
+                    </div>
+                </a>
+
+                <!-- Body Care -->
+                <a href="./products.html?cat=bodycare" class="category-link">
+                    <div class="category-card">
+                        <img src="./imgs/body care/1790786603662724520.png" alt="Body Care">
+                        <div class="category-overlay">
+                            <h5>Body Care</h5>
+                            <span><i class="bi bi-arrow-up-right"></i></span>
                         </div>
-                        <h5 class="category-name">Body Care <span>></span></h5>
-                    </a>
-                </div>
-                <!-- hair care -->
-                <div class="category-item">
-                    <a href="./products.html?cat=haircare" class="category-link">
-                        <div class="category-card">
-                            <img src="./imgs/hair care/1790786439050525591.png" alt="haircare">
+                    </div>
+                </a>
+
+                <!-- Hair Care -->
+                <a href="./products.html?cat=haircare" class="category-link">
+                    <div class="category-card">
+                        <img src="./imgs/hair care/1790786439050525591.png" alt="Hair Care">
+                        <div class="category-overlay">
+                            <h5>Hair Care</h5>
+                            <span><i class="bi bi-arrow-up-right"></i></span>
                         </div>
-                        <h5 class="category-name">Hair Care <span>></span></h5>
-                    </a>
-                </div>
-                <!-- perfumes -->
-                <div class="category-item">
-                    <a href="./products.html?cat=perfumes" class="category-link">
-                        <div class="category-card">
-                            <img src="./imgs/perfumes/1790863883160498953.png" alt="perfumes">
+                    </div>
+                </a>
+
+                <!-- Perfumes -->
+                <a href="./products.html?cat=perfumes" class="category-link">
+                    <div class="category-card">
+                        <img src="./imgs/perfumes/1790863883160498953.png" alt="Perfumes">
+                        <div class="category-overlay">
+                            <h5>Perfumes</h5>
+                            <span><i class="bi bi-arrow-up-right"></i></span>
                         </div>
-                        <h5 class="category-name"> Perfumes <span>></span></h5>
-                    </a>
-                </div>
-                <!-- Body splash -->
-                <div class="category-item">
-                    <a href="./products.html?cat=bodysplash" class="category-link">
-                        <div class="category-card">
-                            <img src="./imgs/body splash/1790862529593742128.png" alt="bodysplash">
+                    </div>
+                </a>
+
+                <!-- Body Splash -->
+                <a href="./products.html?cat=bodysplash" class="category-link">
+                    <div class="category-card">
+                        <img src="./imgs/body splash/1790862529593742128.png" alt="Body Splash">
+                        <div class="category-overlay">
+                            <h5>Body Splash</h5>
+                            <span><i class="bi bi-arrow-up-right"></i></span>
                         </div>
-                        <h5 class="category-name">Body Splash <span>></span></h5>
-                    </a>
-                </div>
+                    </div>
+                </a>
+
             </div>
         </div>
     </section>
-    <!-- end categories section -->
+    <!-- End Categories Section -->
+
     <!-- start contact us -->
     <section class="contactus d-flex align-items-center justify-content-center" id="contactus">
 
@@ -299,7 +363,7 @@
                             <i class=" bi bi-envelope-fill"></i>
                         </div>
                         <p class="mb-0 ">
-glowmatch@gmail.com</p>
+                            glowmatch@gmail.com</p>
                     </div>
                     <div class="d-flex align-items-center gap-3">
                         <div

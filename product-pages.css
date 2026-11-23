@@ -237,3 +237,138 @@ footer .container-fluid {
 }
 
 .section-title { color: var(--title-color); }
+
+/* ============================= */
+/* Product Cards Design */
+/* ============================= */
+
+.product-col {
+    display: flex;
+}
+
+.product-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Product Images */
+.product-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card Body */
+.product-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+/* Product Name */
+.product-title {
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+/* Product Description */
+.product-desc {
+    min-height: 75px;
+    line-height: 1.6;
+}
+
+/* Product Price */
+.product-price {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* Add To Cart Button */
+.add-cart-btn {
+    background-color: #800020;
+    color: white;
+    border: 1px solid #800020;
+    border-radius: 25px;
+    padding: 11px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: auto;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.add-cart-btn:hover {
+    background-color: #b76e79;
+    border-color: #b76e79;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Card Hover */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(128, 0, 32, 0.15);
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .product-img {
+        height: 250px;
+    }
+
+    .product-title {
+        min-height: auto;
+    }
+
+    .product-desc {
+        min-height: auto;
+    }
+}
+
+/* ============================= */
+/* Shopping Cart Icon */
+/* ============================= */
+
+.cart-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand);
+    text-decoration: none;
+    font-size: 25px;
+    margin: 0 12px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.cart-link:hover {
+    color: var(--nav-hover);
+}
+
+/* Cart Counter */
+.cart-count {
+    position: absolute;
+    top: -9px;
+    right: -10px;
+    background-color: #d00045;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

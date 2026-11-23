@@ -43,26 +43,43 @@ let rgxEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
     }
 
 };
+
 const root = document.documentElement;
 const themeBtns = document.querySelectorAll(".theme-toggle");
 
+// Get saved theme
+const savedTheme = localStorage.getItem("theme") || "light";
+
+// Apply saved theme when page loads
+root.setAttribute("data-bs-theme", savedTheme);
+
 function updateIcon() {
-  const dark = root.getAttribute("data-bs-theme") === "dark";
-  document.querySelectorAll(".theme-toggle i").forEach(i => {
-    i.className = dark ? "bi bi-sun-fill" : "bi bi-moon-fill";
-  });
-  document.querySelectorAll(".theme-text").forEach(t => {
-    t.textContent = dark ? "Light" : "Dark";
-  });
+    const dark = root.getAttribute("data-bs-theme") === "dark";
+
+    document.querySelectorAll(".theme-toggle i").forEach(i => {
+        i.className = dark ? "bi bi-sun-fill" : "bi bi-moon-fill";
+    });
+
+    document.querySelectorAll(".theme-text").forEach(t => {
+        t.textContent = dark ? "Light" : "Dark";
+    });
 }
 
+// Update icon on page load
 updateIcon();
 
+// Theme toggle buttons
 themeBtns.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const next = root.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
-    root.setAttribute("data-bs-theme", next);
-    localStorage.setItem("theme", next);
-    updateIcon();
-  });
+    btn.addEventListener("click", () => {
+
+        const next = root.getAttribute("data-bs-theme") === "dark"
+            ? "light"
+            : "dark";
+
+        root.setAttribute("data-bs-theme", next);
+
+        localStorage.setItem("theme", next);
+
+        updateIcon();
+    });
 });

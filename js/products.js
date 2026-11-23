@@ -975,38 +975,58 @@ const categoryNames = {
   bodysplash: "Body Splash"
 };
 
+
 function fillSection(name, items) {
   const section = document.getElementById(name + "-section");
 
-  // no products for this section -> hide it
+  // Hide section if there are no products
   if (items.length === 0) {
     section.classList.add("d-none");
     return;
   }
 
-  let cartona = "";   
+  let cartona = "";
 
   for (let i = 0; i < items.length; i++) {
     const p = items[i];
 
-    const badge = p.soldOut ? '<span class="sold-badge">Sold out</span>' : "";
-    const oldPrice = p.oldPrice ? `<del class="me-2">${p.oldPrice} EGP</del>` : "";
+    const badge = p.soldOut
+      ? '<span class="sold-badge">Sold out</span>'
+      : "";
+
+    const oldPrice = p.oldPrice
+      ? `<del class="me-2">${p.oldPrice} EGP</del>`
+      : "";
+
     const button = p.soldOut
       ? '<button class="btn btn-secondary w-100" disabled>Sold out</button>'
-      : `<button class="btn add-to-cart w-100" data-id="${p.id}">Add to cart</button>`;
+      : `<button class="btn add-to-cart add-cart-btn w-100" data-id="${p.id}">Add to cart</button>`;
 
     cartona += `
-      <div class="col-md-4">
-        <div class="card h-100">
+      <div class="col-12 col-sm-6 col-lg-4 product-col">
+        <div class="card product-card">
+
           <div class="img-wrap">
             ${badge}
-            <img src="${p.img}" class="card-img-top" alt="${p.name}">
+            <img src="${p.img}" class="card-img-top product-img" alt="${p.name}">
           </div>
-          <div class="card-body">
-            <h5 class="card-title">${p.name}</h5>
-            <p class="card-text">${p.desc}</p>
-            <p class="fw-bold">${oldPrice}${p.price} EGP</p>
+
+          <div class="card-body product-card-body">
+
+            <h5 class="card-title product-title">
+              ${p.name}
+            </h5>
+
+            <p class="card-text product-desc">
+              ${p.desc}
+            </p>
+
+            <p class="fw-bold product-price">
+              ${oldPrice}${p.price} EGP
+            </p>
+
             ${button}
+
           </div>
         </div>
       </div>`;
@@ -1015,6 +1035,7 @@ function fillSection(name, items) {
   document.getElementById(name + "-list").innerHTML = cartona;
   section.classList.remove("d-none");
 }
+
 
 function renderProducts() {
   if (!document.getElementById("all-list")) return;
@@ -1051,3 +1072,57 @@ function renderProducts() {
   fillSection("all", otherItems);
 }
 renderProducts();
+
+
+ // ===================== Shopping Cart Counter =====================
+
+// Update cart counter
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem("glowCart")) || [];
+
+    let totalItems = cart.reduce((total, item) => {
+        return total + (Number(item.quantity) || 1);
+    }, 0);
+
+    document.querySelectorAll(".cart-count").forEach(counter => {
+        counter.textContent = totalItems;
+    });
+}
+
+// Reset counter visually when page loads
+document.querySelectorAll(".cart-count").forEach(counter => {
+    counter.textContent = 0;
+});
+
+
+
+
+// Add product to cart
+document.addEventListener("click", function(event) {
+
+    let button = event.target.closest(".add-to-cart");
+
+    if (!button) return;
+
+    let productId = button.getAttribute("data-id");
+
+    let cart = JSON.parse(localStorage.getItem("glowCart")) || [];
+
+    let existingProduct = cart.find(item => item.id === productId);
+
+    if (existingProduct) {
+        existingProduct.quantity++;
+    } else {
+        cart.push({
+            id: productId,
+            quantity: 1
+        });
+    }
+
+    localStorage.setItem("glowCart", JSON.stringify(cart));
+
+    updateCartCount();
+});
+
+// Show saved count when page loads
+updateCartCount();
