@@ -154,10 +154,10 @@ html {
 }
 
 footer .container-fluid {
-    width: 100% !important;
-    margin: 0;
+   width: 100% !important;
     max-width: 100% !important;
-    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     padding-left: 0;
     padding-right: 0;
 }
@@ -237,3 +237,14 @@ footer .container-fluid {
 }
 
 .section-title { color: var(--title-color); }
+mark {
+    background-color: #ffd1dc;
+    color: #800020;
+    padding: 0;
+    border-radius: 3px;
+}
+
+[data-bs-theme="dark"] mark {
+    background-color: #e8a0ad;
+    color: #2a1a1d;
+}

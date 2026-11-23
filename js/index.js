@@ -66,3 +66,22 @@ themeBtns.forEach(btn => {
     updateIcon();
   });
 });
+let searchIcons = document.querySelectorAll(".bi-search");
+
+searchIcons.forEach(function(icon) {
+    icon.addEventListener("click", function() {
+
+        let form = icon.closest("form");
+        let searchInput = form.querySelector('input[type="search"]');
+
+        let searchValue = searchInput.value.trim();
+
+        if (searchValue === "") {
+            alert("Please enter a product name");
+            return;
+        }
+
+        window.location.href = `products.html?search=${encodeURIComponent(searchValue)}`;
+
+    });
+});
