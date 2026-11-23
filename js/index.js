@@ -68,18 +68,30 @@ function updateIcon() {
 // Update icon on page load
 updateIcon();
 
-// Theme toggle buttons
 themeBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
+  btn.addEventListener("click", () => {
+    const next = root.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-bs-theme", next);
+    localStorage.setItem("theme", next);
+    updateIcon();
+  });
+});
+let searchIcons = document.querySelectorAll(".bi-search");
 
-        const next = root.getAttribute("data-bs-theme") === "dark"
-            ? "light"
-            : "dark";
+searchIcons.forEach(function(icon) {
+    icon.addEventListener("click", function() {
 
-        root.setAttribute("data-bs-theme", next);
+        let form = icon.closest("form");
+        let searchInput = form.querySelector('input[type="search"]');
 
-        localStorage.setItem("theme", next);
+        let searchValue = searchInput.value.trim();
 
-        updateIcon();
+        if (searchValue === "") {
+            alert("Please enter a product name");
+            return;
+        }
+
+        window.location.href = `products.html?search=${encodeURIComponent(searchValue)}`;
+
     });
 });
