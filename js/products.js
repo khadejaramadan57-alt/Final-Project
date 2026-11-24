@@ -957,12 +957,142 @@ const products = {
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoURTPx45dUCJoOC2U4GUrDh1v9YqETaFW87byQPQF1w&s=10",
       tag: "",
       soldOut: true
+    },
+        {
+      id: "bodysplash-17",
+      name: "Pink Cashmere Fragrance Mist",
+      desc: "Velvety pink cashmere fragrance mist with soft floral and amber.",
+      price: 850,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRew9A0i5-zdgDXAUCYh9OCTogEriifdpIB8Hu7ovjxkg&s",
+      tag: "",
+      soldOut: false
+    },
+    {
+      id: "bodysplash-18",
+      name: "Vanilla Passionfruit Body Mist",
+      desc: "Warm, cozy vanilla and passionfruit scented body mist.",
+      price: 850,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoURTPx45dUCJoOC2U4GUrDh1v9YqETaFW87byQPQF1w&s=10",
+      tag: "",
+      soldOut: true
     }
+  ],
+
+  men: [
+    {
+      id: "men-1",
+      name: "Morgan's Men's Shampoo",
+      desc: "A refreshing men's shampoo for clean, revitalized hair and daily care",
+      price: 200,
+      img: "https://images.openai.com/static-rsc-4/eVt1I0W8rtxCJxTej6p2SoT2knJB_vHpmhc-yqwhmoM54jF0lfqUU6cnmIqPBHF7uOyhVsss1SvIoHiFPdxeen1I9nur80vtoSRIaHi6Vx85P8-BwRzkDso5-U3vx0V3C1E7pqMyOJKlh76oBukIX6ASMajwdkHYDYyHu8JrWCk?purpose=inline",
+      tag: "best",
+      soldOut: false
+    },
+    {
+      id: "men-2",
+      name: "Men's Grooming Skincare Set",
+      desc: "A complete men's care set for daily cleansing, hydration, and smooth skin.",
+      price: 250,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7gxH_A55N_pzOkfHsYOrhoyR9bz663AlkyAjpLKkVcg&s=10",
+      tag: "best",
+      soldOut: false
+    },
+     {
+      id: "men-3",
+      name: "Nivea Men Deep Roll-On",
+      desc: "Long-lasting anti-perspirant protection with a dark wood scent",
+      price: 300,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ999qBLZqX8NfYE4VhYcZ_2dMIeg50QAKC1FdLm248A&s=10",
+      tag: "best",
+      soldOut:  true
+    },
+    {
+      id: "men-4",
+      name: "Lumin Charcoal Face Wash",
+      desc: "A deep-cleansing daily detox face wash that removes impurities and excess oil.",
+      price: 300,
+      img: "https://images.openai.com/static-rsc-4/HbcsDP1GweEzq8I-mDBiYb2i2cCjzg8q1ZO2TxNw3eqwPqFSvq1q86ROeJI8o3Dbd0Yw3hiDBWfCobWP-sB-lqGKPByDokwZF9sY4iEV9kW5zqrZ6xMj1OTOkE5zuGLYRYycxOrfv3ft_4uzVzk1_ryuBnQNx23uPLDrl3ZPkVdlKJ4RG4sBq6op9PIwa1cG?purpose=fullsize",
+      tag: "new",
+      soldOut: true
+    },
+    {
+    id: "men-5",
+    name: "Dermabeards Nourishing Beard Oil",
+    desc: "A softening beard oil infused with jojoba and argan oil for healthy-looking facial hair.",
+    price: 240,
+    img: "https://images.openai.com/static-rsc-4/RL20zpOGcZplxTVQ63lNdTHHIo4WIo_7l2cWuHocGu_2mufjLl6kViob-OwLhv2rlMrfPLRA882FDOTsVXKsEew-evqjugoCFP9ERoq2NleleJlS1MJiDL2IC9GEgrCxsP4UbLj-68hgBb9LfHL3oabkxqoPSJMSAIj_39uD0N2HAw0-CBusrBI4lvHZF8x6?purpose=fullsize",
+    tag: "new",
+    soldOut: false
+},
+ {
+    id: "men-6",
+    name: "Give Me Men's 3-Piece Care Set",
+    desc: "A daily grooming bundle with shampoo, conditioner, and body wash with sandalwood and tonka bean.",
+    price: 480,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_wwZwvchrMeOSpT1WvwzMKe_2wjfZ74ft5A9axDKwhA&s=10",
+    tag: "new",
+    soldOut: true
+},
+{
+    id: "men-7",
+    name: "Clear Men Deep Cleanse Shampoo",
+    desc: "A purifying men's shampoo for deep scalp cleansing and fresh hair.",
+    price: 200,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI87WHYvQGHCRkEFPPwBcvO5o6nHVG_aLyd-oXsK2ADg&s",
+    tag: "",
+    soldOut: false
+},
+{
+    id: "men-8",
+    name: "Rexona Men Advanced Protection Spray",
+    desc: "Long-lasting anti-perspirant spray with invisible protection against sweat and odor.",
+    price: 180,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMSSUTc2SxtqXxd5tYYyqyCfjK4d0kwsQh9s5MlTIO1A&s=10",
+    tag: "",
+    soldOut: true
+},
+{
+    id: "men-9",
+    name: "Man Look Curly Hair Gel",
+    desc: "An alcohol-free styling hair gel for defining and holding curly hair.",
+    price: 190,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDtPt4BUXMCDGu1LJVCFKQxZvdeWaPEl2zVH35ijbAsw&s",
+    tag: "",
+    soldOut: false
+},
+{
+    id: "men-10",
+    name: "Man Look After Shave Balsam",
+    desc: "Soothing after-shave balsam enriched with allantoin to calm and hydrate all skin types.",
+    price: 150,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSUNJcrs_bdX76f5DCt_g5UZ6JFug3FlI2nAzDwjR1lg&s=10",
+    tag: "",
+    soldOut: true
+},
+{
+    id: "men-11",
+    name: "Beard & Hair Shampoo & Conditioner Set",
+    desc: "A revitalizing duo set with anti-dandruff shampoo and nourishing conditioner for clean, soft hair and beard.",
+    price: 340,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdNRtokZxVkVTVUKxkD2XsdmyFIBJOmHuI89vyKfEooQ&s",
+    tag: "",
+    soldOut: false
+},
+{
+    id: "men-12",
+    name: "Men's Daily Grooming Essential",
+    desc: "A refreshing everyday men's care essential for clean skin and all-day comfort.",
+    price: 185,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3fuLluaqHl1NjKz9ebDlEoYN8L9WF5pW7AG75-6z94w&s=10",
+    tag: "",
+    soldOut: false
+}
 
   ]
 
 
 };
+
 
 // ===================== Render products =====================
 const categoryNames = {
@@ -972,6 +1102,7 @@ const categoryNames = {
   haircare: "Hair Care",
   perfumes: "Perfumes",
   bodysplash: "Body Splash",
+  men: "Men's Products"
 };
 
 // Puts <mark> around the typed letters inside a text (not case sensitive)
@@ -1019,13 +1150,15 @@ function fillSection(name, items, word) {
     cartona += `
       <div class="col-12 col-sm-6 col-lg-4 product-col">
         <div class="card product-card">
-
-          <div class="img-wrap">
-            ${badge}
-            <img src="${p.img}" class="card-img-top product-img" alt="${p.name}">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">${highlight(p.name, word)}</h5>
+<a href="review.html?id=${p.id}" class="text-decoration-none text-reset">
+         <div class="img-wrap">
+           ${badge}
+           <img src="${p.img}" class="card-img-top product-img" alt="${p.name}">
+         </div>
+       </a>
+       <div class="card-body">
+       
+          <h5 class="card-title">${highlight(p.name, word)}</h5>
             <p class="card-text">${highlight(p.desc, word)}</p>
             <p class="fw-bold">${oldPrice}${p.price} EGP</p>
             ${button}

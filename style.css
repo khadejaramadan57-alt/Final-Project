@@ -1086,3 +1086,40 @@ body {
 [data-bs-theme="dark"] .Home::before {
     opacity: 0.5;
 }
+/*Button-men,products*/
+.men-btn {
+    background-color: #800020;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.men-btn:hover {
+    background-color: #a85b70;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(128, 0, 32, 0.2);
+}
+/* Make 3 product cards in each row */
+
+@media (min-width: 992px) {
+    #all-list .product-item,
+    #best-list .product-item,
+    #new-list .product-item {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+/* تنسيق الزرار في الوضع الداكن ليتطابق مع لون البراند الوردي */
+[data-bs-theme="dark"] .btn.men-btn,
+[data-bs-theme="dark"] a.men-btn {
+    background-color: var(--brand) !important;
+    border-color: var(--brand) !important;
+    color: #2a1a1d !important;
+}
