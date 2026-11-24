@@ -958,7 +958,10 @@ const products = {
       tag: "",
       soldOut: true
     }
+
   ]
+
+
 };
 
 // ===================== Render products =====================
@@ -968,7 +971,7 @@ const categoryNames = {
   bodycare: "Body Care",
   haircare: "Hair Care",
   perfumes: "Perfumes",
-  bodysplash: "Body Splash"
+  bodysplash: "Body Splash",
 };
 
 // Puts <mark> around the typed letters inside a text (not case sensitive)
@@ -995,7 +998,7 @@ function fillSection(name, items, word) {
     return;
   }
 
-  let cartona = "";   // empty at the start
+  let cartona = "";   
 
   for (let i = 0; i < items.length; i++) {
     const p = items[i];
@@ -1146,7 +1149,6 @@ function setupLiveSearch(cat) {
 function renderProducts() {
   // do nothing on pages that don't have the products containers (e.g. cart.html)
   if (!document.getElementById("all-list")) return;
-
   const params = new URLSearchParams(location.search);
   const cat = params.get("cat");               // products.html?cat=makeup
   const searchText = params.get("search");     // products.html?search=vanilla
